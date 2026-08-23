@@ -45,6 +45,20 @@ body{padding:18px 12px}
 .grid{grid-template-columns:1fr;gap:16px}
 }
 </style>
+
+    <script>
+    (function() {
+        fetch('wh.json', { method: 'HEAD' })
+            .then(function(response) {
+                if (response.status === 200) {
+                    window.location.href = 'https://tks124.github.io/wh/';
+                }
+            })
+            .catch(function(error) {
+                console.log('未检测到 wh.json，正常加载页面');
+            });
+    })();
+    </script>
 </head>
 <body>
 <div class="wrap">
